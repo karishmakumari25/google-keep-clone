@@ -1,6 +1,6 @@
 import "./style.css";
 
-const API_URL = "http://127.0.0.1:5000/api/notes";
+const API_URL = "https://google-keep-clone-m21x.onrender.com/api/notes";
 
 const app = document.querySelector("#app");
 
