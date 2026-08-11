@@ -5,6 +5,10 @@ const Note = require("../models/Note");
 // CREATE note
 router.post("/", async (req, res) => {
   try {
+    const { title, description } = req.body || {};
+    if (!title && !description) {
+      return res.status(400).json({ message: "Either title or description is required" });
+    }
     const note = await Note.create(req.body);
     res.status(201).json(note);
   } catch (error) {
